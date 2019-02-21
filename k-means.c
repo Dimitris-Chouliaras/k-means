@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 		int flag_end = 0;    // Flag for ending k-means
 		int flag = -1;       // Flag for filtering
     clock_t start, end;  // Count the time
+    int q;               // Used in switch
 
 // srand(time(NULL));
 
@@ -39,14 +40,46 @@ int main(int argc, char *argv[])
 /* -------------------------------------------------------------------------- */
     // Finding the dimensions of Elements
 
-    do
+    printf("\n Dataset is dimension seperated with: ");
+    printf("\n 1. Comma (,) ");
+    printf("\n 2. Space ( ) ");
+    printf("\n 3. Tab ");
+    printf("\n Choose your answer : ");
+    scanf("%d",&q);
+
+    switch (q)
     {
-        fscanf(Dataset, "%c", &c);
-        if (c == ',')
+    case 1:
+             do
+             {
+               fscanf(Dataset, "%c", &c);
+               if (c == ',')
+               dim++;
+             } while (c != '\n');
+             dim++;
+             rewind(Dataset);  // File reset
+    break;
+    case 2:
+             do
+             {
+               fscanf(Dataset, "%c", &c);
+               if (c == ' ')
+               dim++;
+             } while (c != '\n');
+             dim++;
+             rewind(Dataset);  // File reset
+    break;
+    case 3:
+            do
+            {
+              fscanf(Dataset, "%c", &c);
+              if (c == '\t')
+              dim++;
+            }while (c != '\n');
             dim++;
-    } while (c != '\n');
-       dim++;
-    rewind(Dataset);  // File reset
+            rewind(Dataset);  // File reset
+    break;
+    }
 
     // Finding the number of Elements
 
