@@ -1,4 +1,5 @@
 This project implements the K-Means clustering algorithm entirely in C.
+
 It reads a dataset from a CSV file, performs clustering based on the number of clusters specified by the user, and outputs the results along with a Python script that visualizes the clusters in 2D using PCA (Principal Component Analysis).
 
 *2 files:*
