@@ -16,7 +16,9 @@ FileHandling.c / FileHandling.h – Contain helper functions for reading and pro
       iii) Automatically generates and runs a Python script (plot_clusters.py) that visualizes the results using PCA.
 
 *Requirements*
+
 C compiler (e.g., GCC)
+
 Python 3 installed with the following packages:  pip install matplotlib numpy scikit-learn
 
 *How to Run*
