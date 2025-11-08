@@ -44,4 +44,5 @@ Cluster 2: 67 points written
 **Notes**
 
 **The dataset must contain only numeric values separated by commas.
+
 **The Python visualization uses PCA to project high-dimensional data to 2D for plotting.
