@@ -27,6 +27,7 @@ Python 3 installed with the following packages:  pip install matplotlib numpy sc
 5. To visualize the results: python plot_clusters.py
 
 *Example Output*
+
 Give the DataSet file: data.csv
 Elements: 200
 Dimensions: 4
